@@ -1,0 +1,11 @@
+project: savantenvs/mitsuba3
+target: fuzz_tensorfile
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tensorfile/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_tensorfile
+    libfuzzer: true
+    timeout: 10

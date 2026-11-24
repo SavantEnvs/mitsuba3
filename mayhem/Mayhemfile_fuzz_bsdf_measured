@@ -1,0 +1,11 @@
+project: savantenvs/mitsuba3
+target: fuzz_bsdf_measured
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bsdf_measured/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_bsdf_measured
+    libfuzzer: true
+    timeout: 10

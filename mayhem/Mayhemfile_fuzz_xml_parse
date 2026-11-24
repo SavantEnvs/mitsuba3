@@ -1,0 +1,11 @@
+project: savantenvs/mitsuba3
+target: fuzz_xml_parse
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_xml_parse/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_xml_parse
+    libfuzzer: true
+    timeout: 10

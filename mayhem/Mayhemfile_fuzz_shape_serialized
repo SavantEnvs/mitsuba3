@@ -1,0 +1,11 @@
+project: savantenvs/mitsuba3
+target: fuzz_shape_serialized
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_shape_serialized/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_shape_serialized
+    libfuzzer: true
+    timeout: 10

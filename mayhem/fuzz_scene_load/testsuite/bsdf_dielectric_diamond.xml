@@ -1,0 +1,8 @@
+<scene version="3.0.0">
+
+	<bsdf type="dielectric" id="object_bsdf">
+            <string name="int_ior" value="diamond"/>
+            <string name="ext_ior" value="air"/>
+	</bsdf>
+
+</scene>

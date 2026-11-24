@@ -1,0 +1,11 @@
+project: savantenvs/mitsuba3
+target: fuzz_emitter_envmap
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_emitter_envmap/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_emitter_envmap
+    libfuzzer: true
+    timeout: 10

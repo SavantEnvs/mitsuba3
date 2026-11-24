@@ -1,0 +1,11 @@
+project: savantenvs/mitsuba3
+target: fuzz_spectrum_file
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_spectrum_file/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_spectrum_file
+    libfuzzer: true
+    timeout: 10
